@@ -1,0 +1,103 @@
+// /* FAKE SELECT */
+// details {
+// 	position: relative;
+// 	width: 300px;
+// 	margin-right: 1rem;
+// }
+// details[open] {
+// 	z-index: 1;
+// 	summary {
+// 		&:before {
+// 			content: '';
+// 			display: block;
+// 			width: 100vw;
+// 			height: 100vh;
+// 			background: transparent;
+// 			position: fixed;
+// 			top: 0;
+// 			left: 0;
+// 		}
+// 		&:after {
+// 			transform: rotate(-45deg) translate(0%, 0%);
+// 		}
+// 	}
+// }
+// summary {
+// 	padding: 1rem;
+// 	cursor: pointer;
+// 	border-radius: 5px;
+// 	background-color: hsl(209, 23%, 22%);
+// 	list-style: none;
+// 	&::-webkit-details-marker {
+// 		display: none;
+// 	}
+// 	&:after {
+// 		content: '';
+// 		display: inline-block;
+// 		float: right;
+// 		width: .5rem;
+// 		height: .5rem;
+// 		border-bottom: 1px solid currentColor;
+// 		border-left: 1px solid currentColor;
+// 		border-bottom-left-radius: 2px;
+// 		transform: rotate(45deg) translate(50%, 0%);
+// 		transform-origin: center center;
+// 		transition: transform ease-in-out 100ms;
+// 	}
+// 	&:focus {
+// 		outline: none;
+// 	}
+// }
+// ul {
+// 	list-style-type: none;
+// 	width: 100%;
+// 	background-color: hsl(209, 23%, 22%);
+// 	position: absolute;
+// 	top: calc(100% + .5rem);
+// 	left: 0;
+// 	padding: 1rem;
+// 	margin: 0;
+// 	box-sizing: border-box;
+// 	border-radius: 5px;
+// 	max-height: 200px;
+// 	overflow-y: auto;
+// }
+// li {
+// 	color: blanchedalmond;
+// 	font-size: medium;
+// 	font-weight: lighter;
+// 	margin: 0;
+// 	padding: 1rem 0;
+// 	border-bottom: 1px solid #ccc;
+// 	&:first-child {
+// 		padding-top: 0;
+// 	}
+// 	&:last-child {
+// 		padding-bottom: 0;
+// 		border-bottom: none;
+// 	}
+// }
+// summary.radios {
+// 	counter-reset: radios;
+// }
+// input[type=radio] {
+// 	counter-increment: radios;
+// 	appearance: none;
+// 	display: none;
+// 	&:checked {
+// 		display: inline;
+// 	}
+// 	&:after {
+// 		content: attr(title);
+// 		display: inline;
+// 		font-size: 1rem;
+// 	}
+// }
+// ul.list {
+// 	counter-reset: labels;
+// }
+// label {
+// 	width: 100%;
+// 	display: block;
+// 	cursor: pointer;
+// }

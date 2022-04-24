@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Saas/style.css";
+import React, { Suspense, lazy } from "react";
+import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
+import Layout from "./Layout";
 
-function App() {
+
+
+const Home = lazy(() => import("./Pages/Home"));
+const Country = lazy(() => import("./Pages/Country"));
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<span>Loading...</span>}>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/country/:id" element={<Country />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </Suspense>
   );
-}
+};
 
 export default App;
